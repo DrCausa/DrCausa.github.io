@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function(){
     const messageContainer = letterPaper.querySelector(".message");
     let currentMessage;
     let lastMessage;
+    let mailStatus = false;
+    let closeTimeout;
 
     const messages = [
         "Eres mi refugio, el lugar donde siempre encuentro paz y alegría.",
@@ -60,25 +62,30 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const email = document.querySelector(".email");
 
-    email.addEventListener("mouseenter", () => {
+    function openMail() {
+        if (closeTimeout) clearTimeout(closeTimeout);
+
         letterPaper.classList.add("active");
         cover.classList.add("open");
         generateMessage();
-    });
 
-    email.addEventListener("mouseleave", () => {
+        closeTimeout = setTimeout(closeMail, 3500);
+    }
+
+    function closeMail() {
         letterPaper.classList.remove("active");
         cover.classList.remove("open");
         cover.style.transitionDelay = "0.2s";
         setTimeout(() => {
             cover.style.transitionDelay = "0s";
         }, 200);
-    });
+    }
 
     const audio = document.querySelector("audio.bg-music");
     const playButton = document.querySelector("button.play-audio");
     const stopButton = document.querySelector("button.stop-audio");
     const pauseButton = document.querySelector("button.pause-audio");
+    const mailButton = document.querySelector("button.open-mail");
         
     function playAudio() {
         audio.play();
@@ -92,6 +99,17 @@ document.addEventListener("DOMContentLoaded", function(){
         audio.pause();
         audio.currentTime = 0;
     }
+
+    mailButton.addEventListener("click", () => {
+        if (mailStatus) {
+            clearTimeout(closeTimeout);
+            closeMail();
+            mailStatus = false;
+        } else {
+            openMail();
+            mailStatus = true;
+        }
+    });
 
     playButton.addEventListener("click", playAudio);
     pauseButton.addEventListener("click", pauseAudio);
