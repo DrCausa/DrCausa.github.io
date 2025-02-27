@@ -74,6 +74,10 @@ body {
 
     opacity: 0.5;
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
 }
 
 .music .controls {
