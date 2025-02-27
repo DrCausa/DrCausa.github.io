@@ -119,7 +119,7 @@ const messages = [
         cover.classList.add("open");
         generateMessage();
 
-        closeTimeout = setTimeout(closeMail, 3500);
+        closeTimeout = setTimeout(closeMail, 5200);
     }
 
     function closeMail() {
