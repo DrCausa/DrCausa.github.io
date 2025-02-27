@@ -8,7 +8,60 @@ document.addEventListener("DOMContentLoaded", function(){
     let mailStatus = false;
     let closeTimeout;
 
-    const messages = [
+const messages = [
+    "Decir adiós nunca es fácil, pero siempre llevaré nuestros recuerdos en mi corazón.",
+    "Aunque nuestros caminos se separen, siempre tendrás un lugar especial en mi vida.",
+    "No es un adiós, sino un hasta luego. Nos volveremos a encontrar.",
+    "Las despedidas son amargas, pero los recuerdos que compartimos son dulces.",
+    "Siempre recordaré cada momento contigo, sin importar la distancia.",
+    "Puede que nos separemos en este momento, pero nuestra conexión siempre perdurará.",
+    "Te deseo lo mejor en tu camino, y espero que la vida te sonría siempre.",
+    "Cada despedida es solo el inicio de una nueva historia por escribir.",
+    "No importa cuán lejos estemos, nuestros lazos seguirán intactos.",
+    "Siempre llevaré en mi corazón lo que compartimos, sin importar dónde estemos.",
+    "Gracias por cada risa, cada conversación y cada instante inolvidable.",
+    "El tiempo y la distancia no pueden borrar lo que significas para mí.",
+    "Te extrañaré más de lo que las palabras pueden expresar.",
+    "Nuestra historia no termina aquí, solo toma un nuevo rumbo.",
+    "Siempre estaré agradecido por haber coincidido en este viaje llamado vida.",
+    "Que el destino nos vuelva a cruzar cuando menos lo esperemos.",
+    "Espero que encuentres felicidad y éxito en cada paso que des.",
+    "Nos veremos en otro momento, en otro lugar, pero siempre en el corazón.",
+    "El mundo es grande, pero la amistad y el cariño nos mantienen cerca.",
+    "No es el final, solo una pausa en nuestra historia.",
+    "Lleva contigo todo lo bueno que vivimos y deja atrás lo que no suma.",
+    "Gracias por haber sido parte de mi vida, aunque sea por un tiempo.",
+    "El adiós duele, pero prefiero recordar todo lo hermoso que vivimos.",
+    "A veces, las despedidas son solo la antesala de un reencuentro inolvidable.",
+    "Nunca olvides que siempre estaré aquí, sin importar la distancia.",
+    "Aunque nuestros caminos se separen, los recuerdos quedarán para siempre.",
+    "La vida nos llevó por caminos distintos, pero siempre desearé lo mejor para ti.",
+    "Lo que vivimos no se desvanece con la distancia, sigue vivo en el corazón.",
+    "Ojalá la vida nos vuelva a cruzar en algún momento.",
+    "No importa cuánto tiempo pase, siempre te recordaré con cariño.",
+    "Cada despedida es la oportunidad de valorar lo que compartimos.",
+    "Gracias por haber sido una parte tan especial de mi vida.",
+    "Aunque hoy nos separemos, sé que nuestras almas seguirán conectadas.",
+    "El destino nos llevó por distintos rumbos, pero siempre serás importante para mí.",
+    "No diré adiós, porque en algún lugar del tiempo nos volveremos a encontrar.",
+    "Que la vida te llene de felicidad y éxito en cada nuevo camino que tomes.",
+    "El cariño y los momentos que compartimos no se desvanecerán con la distancia.",
+    "Las despedidas son difíciles, pero prefiero sonreír por lo que vivimos.",
+    "Tal vez el adiós sea solo una forma de prepararnos para un reencuentro más especial.",
+    "Las palabras no bastan para expresar cuánto te extrañaré.",
+    "Espero que la vida te regale muchas razones para sonreír, siempre.",
+    "Gracias por todo lo que compartimos, nunca lo olvidaré.",
+    "A donde sea que vayas, espero que encuentres la felicidad que mereces.",
+    "No es fácil despedirse, pero a veces es necesario para seguir creciendo.",
+    "Hoy nos separamos, pero nuestros recuerdos permanecerán por siempre.",
+    "Las despedidas son solo un capítulo más en la historia de la vida.",
+    "Donde quiera que estés, siempre te llevaré en mi corazón.",
+    "No importa la distancia, lo vivido jamás se borra.",
+    "Te deseo lo mejor en cada nuevo paso que des en tu camino.",
+    "Hoy nos despedimos, pero nuestro vínculo seguirá existiendo en el tiempo."
+];
+    
+/*     const messages = [
         "Eres mi refugio, el lugar donde siempre encuentro paz y alegría.",
         "Cada conversación contigo es un regalo que atesoro profundamente.",
         "Tu risa es mi melodía favorita; suena en mi corazón cada día.",
@@ -55,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(){
         "Eres la razón por la que creo en las segundas oportunidades.",
         "A tu lado, he aprendido que el amor verdadero no conoce límites.",
         "Eres el amor que siempre he estado buscando, y finalmente te he encontrado."
-    ];
+    ]; */
 
     const email = document.querySelector(".email");
 
